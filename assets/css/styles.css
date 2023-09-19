@@ -1,13 +1,82 @@
 *{   margin: 0;
     padding: 0;
 }
-nav ul li {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: inline;
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: right;
+    padding: 10px;
+    background-color: #38195a;
 }
-.sectiona{
-    background-color: #393e46; 
+
+.logo img {
+    max-width: 90px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 200px;
+}
+
+nav a {
+    text-decoration: none;
     color: #fff;
+    font-weight: bold;
+}
+
+.section0 {
+    background-color: #38195a;
+    color: #fff;
+    text-align: center
+}
+.mi-seccion {
+    /* Establece un ancho y alto para la sección según tus necesidades */
+    /* Agrega otros estilos a tu sección si es necesario */
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+}
+
+.mi-seccion img {
+    /* Establece un ancho y alto del 100% para la imagen para que se ajuste al tamaño de la sección */
+    width: 15%;
+    height: 15%;
+    /* Evita que la imagen se desborde de la sección */
+    object-fit: cover; /* Puedes usar "contain" si prefieres que la imagen se ajuste completamente dentro de la sección */
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content img {
+    max-width: 50%;
+    height: auto;
+}
+
+.content .text {
+    flex: 1;
+    text-align: left;
+    padding: 20px;
+}
+
+.content .textb {
+    flex: 1;
+    text-align: left;
+    padding: 20px;
+}
+
+.foot{
+    background-color: #38195a;
+    color: #fff;
+    text-align: center;
 }
