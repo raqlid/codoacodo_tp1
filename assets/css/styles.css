@@ -4,14 +4,16 @@
 header {
     display: flex;
     justify-content: space-between;
-    align-items: right;
-    padding: 10px;
+    align-items: center;
+    /*padding: 10px;*/
     background-color: #38195a;
 }
 
 .logo img {
-    max-width: 90px;
-    height: auto;
+    max-width: 150px;
+    height: 60px;
+    width: 60px;
+    padding-left: 10px;
 }
 
 nav ul {
@@ -34,21 +36,21 @@ nav a {
 .section0 {
     background-color: #38195a;
     color: #fff;
-    text-align: center
+    text-align: center;
+    border-color: #ddd;
+    margin-top: 0.4px;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
 }
 .mi-seccion {
-    /* Establece un ancho y alto para la sección según tus necesidades */
-    /* Agrega otros estilos a tu sección si es necesario */
     background-color: #f0f0f0;
     border: 1px solid #ddd;
 }
 
 .mi-seccion img {
-    /* Establece un ancho y alto del 100% para la imagen para que se ajuste al tamaño de la sección */
     width: 15%;
     height: 15%;
-    /* Evita que la imagen se desborde de la sección */
-    object-fit: cover; /* Puedes usar "contain" si prefieres que la imagen se ajuste completamente dentro de la sección */
+    object-fit: cover;
 }
 
 .content {
