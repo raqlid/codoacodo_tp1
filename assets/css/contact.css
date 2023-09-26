@@ -1,68 +1,100 @@
-body{
-    background-color: #38195a;
-    color: #ffa400;
-    font-family: sans-serif;
+body {
+  background-color: #38195a;
+  color: #ffa400;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-form{
-    background-color: #d9a404;
-    border: 1px solid #d91895;
-    padding: 8px;
-    color: #38195a;
+h1 {
+  font-size: 5vh;
 }
 
-label input, textarea{
-    display: block;
-    margin: 5px 0;
-}
-
-input, textarea{
-    background-color: #d91895;
-    border: 1px solid #ffb633;
-    border-radius: 3px;
-    width: 100%;
-    padding: 12px 20px;
-    color: #38195a;
-    font-size: 1em;
-    box-sizing: border-box;
-    outline: none;
-}
-
-textarea {
-    height: 150px;
-    resize: none;
-    font-family: sans-serif;
-}
-
-.description{
-    color: #d91895;
-    font-size: 1.1em;
-}
-
-.navbar li{
-    display: inline;
+main {
+  max-width: 80%;
 }
 
 div {
-    margin: 0 auto 15px;
+  justify-content: space-between;
+}
+
+form {
+  background-color: #d9a404;
+  border: 1px solid #d91895;
+  padding: 8px;
+  color: #38195a;
+  font-size: 3vh;
+}
+
+label input,
+textarea {
+  margin: 5px 0;
+}
+
+form input,
+textarea[placeholder] {
+  color: white;
+}
+
+input,
+textarea {
+  background-color: #d91895;
+  border: 1px solid #ffb633;
+  border-radius: 3px;
+  width: 100%;
+  padding: 12px 20px;
+  color: #38195a;
+  font-size: 1em;
+  box-sizing: border-box;
+  outline: none;
+}
+
+textarea {
+  height: 150px;
+  resize: none;
+  font-family: sans-serif;
+}
+
+.description {
+  margin-bottom: 5vh;
+  color: #d91895;
+  font-size: 3.5vh;
+  text-align: justify;
+  /* text-shadow: 1px 1px 1px #ffb633; */
+}
+
+.navbar li {
+  display: inline;
 }
 
 nav a:link {
-    color: #d91895;
+  font-size: 3.2vh;
+  margin: 0.2vw;
+  color: #ffb633;
 }
 
-.center {
-    margin: -15px auto;
-    width: 70%;
-    padding: 10px;
+nav a:visited {
+  color: #d91895;
 }
 
 button {
-    text-decoration: none;
-    background-color: #d91895;
-    color: #38195a;
-    cursor: pointer;
-    border: 1px solid #ffb633;
-    font-size: medium;
-    border-radius: 3px;
+  margin: 1vh;
+  padding: 0.5vh;
+  text-decoration: none;
+  font-size: 2.5vh;
+  color: #38195a;
+  cursor: pointer;
+  border: 1px solid #d91895;
+  border-radius: 3px;
+}
+
+footer {
+  text-align: center;
+  padding: 3vh;
+  font-size: 2.5vh;
+}
+
+footer h4 {
+  margin-top: -1vh;
 }
