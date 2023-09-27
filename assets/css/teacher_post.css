@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --fucsiaOscuro: #D91895;
+    --morado: #38195A;
+    --naranjaOscuro: #ffa400;
+    --naranjaClaro: #FFB633;
+    --doradoOscuro: #cc8300;
+    --doradoClaro: #D9A404;
+}
+
+h1 {
+    font-size: 4vw;
+}
+
+h2 {
+    font-size: 3.5vw;
+}
+
+h3 {
+    font-size: 3vw;
+    margin-bottom: 2%;
+    color: var(--morado);
+}
+
+h4 {
+    font-size: 2.5vw;
+}
+
+p {
+    font-size: 2vw;
+}
+
+
+body {
+    width: 98%;
+    margin: auto;
+}
+
+header {
+    display: block;
+    background-color: var(--naranjaClaro);
+    text-align: center;
+    color: var(--fucsiaOscuro);
+    padding-top: 5vw;
+    padding-bottom: 3vw;
+    border-radius: 2vw 2vw 0 0;
+    margin: auto;
+    margin-top: 1vw;
+}
+
+#username {
+    width: 40%;
+    margin: auto;
+    color: white;
+    background-color: var(--naranjaOscuro);
+    opacity: 0.3;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    border-top: solid 0.5vh white;
+    border-bottom: solid 0.5vh white;
+    border-radius: 5vh;
+}
+
+#certified {
+    color: var(--morado);
+}
+
+#offered-service {
+    padding-top: 3%;
+    /*border: solid 1px black;*/
+}
+
+.align-center {
+    text-align: center;
+    margin-bottom: 3vh;
+}
+
+.img-frame img {
+    border-radius: 2rem;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    padding-bottom: 2%;
+}
+
+
+.services {
+    display: flex;
+    flex-flow: row wrap;
+    color: white;
+    background-color: var(--morado);
+    border-radius: 2vh;
+}
+
+.service {
+    padding: 1vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+    width: 45%;
+    text-indent: 2vw;
+}
+
+@media (max-width: 600px) {
+    .service {
+        flex: 100%;
+        padding-left: 3vh;
+    }
+
+    .service h3 {
+        text-align: center;
+    }
+}
+
+.service h3{
+    color: var(--fucsiaOscuro);
+    text-align: center;
+}
+
+
+.service p {
+    text-align: justify;
+}
+
+ul{
+    margin: 2vw;
+    list-style-type: none;
+}
+
+ul li{
+    padding: 2vw;
+}
