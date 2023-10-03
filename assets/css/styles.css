@@ -15,6 +15,7 @@ header {
     height: 60px;
     width: 60px;
     padding-left: 10px;
+    transform: rotate(15deg);
 }
 
 .navbar {
