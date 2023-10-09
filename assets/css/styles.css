@@ -22,10 +22,6 @@ header {
     }
 }
 
-
-
-
-
 .logo img {
     animation-name: animacionlogo;
     animation-duration: 1s;
@@ -61,6 +57,16 @@ header {
     background-color: #d91895;
 }
 
+.mi-main{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+@media (max-width: 300px) {
+    .mi-main {
+    flex-direction: column;
+    }
+}
 /*.mi-seccion-left {
     padding: 10px;
     flex: 50%;
@@ -102,9 +108,10 @@ header {
 }
 
 /* Responsive layout - makes a one column-layout instead of two-column layout */
-@media (max-width: 800px) {
+@media (max-width: 300px) {
     .flex-container {
-        flex-direction: column;
+        display: flex;
+        flex-flow: column wrap
     }
 }
 
