@@ -13,6 +13,14 @@
     --doradoClaro: #D9A404;
 }
 
+html{
+    background-image: url('../images/fondo claro.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size:cover;
+    margin: auto;  
+}
+
 h1 {
     font-size: 3em;
 }
@@ -31,27 +39,25 @@ h4 {
     font-size: 1.5em;
 }
 
-p {
+p, a {
     font-size: 1em;
 }
 
 
 body {
     font-size: 18px;
-    width: 98%;
+    width: 90%;
     margin: auto;
 }
 
 header {
-    display: block;
     background-color: var(--naranjaClaro);
     text-align: center;
     color: var(--fucsiaOscuro);
     padding-top: 5vw;
-    padding-bottom: 3vw;
+    padding-bottom: 5vw;
     border-radius: 2vw 2vw 0 0;
-    margin: auto;
-    margin-top: 1vw;
+    margin-top: 4vw;
 }
 
 #username {
@@ -93,6 +99,64 @@ img {
     padding-bottom: 2%;
 }
 
+#img-start{
+    margin-top: 0;
+    padding-bottom: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--morado);
+}
+
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 0.7vw 0.8vw;
+    text-decoration: none;
+}
+
+li a:hover,.dropdown:hover .dropbtn {
+    background-color: var(--fucsiaOscuro);
+}
+
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--fucsiaOscuro);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px var(--morado);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 
 .services {
     display: flex;
@@ -131,11 +195,11 @@ img {
     text-align: justify;
 }
 
-ul{
+.unordered-list{
     margin: 2vw;
     list-style-type: none;
 }
 
-ul li{
+.unordered-list li{
     padding: 2vw;
 }

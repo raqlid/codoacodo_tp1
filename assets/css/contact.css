@@ -5,6 +5,19 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-image: url("./../images/partitura.jpg");
+}
+
+.container {
+  background-color: #38195af5;
+  color: #ffa400;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 60%;
+  margin-bottom: 5vh;
+  margin-top: 8vh;
 }
 
 h1 {
@@ -15,9 +28,9 @@ main {
   max-width: 80%;
 }
 
-div {
+/* div {
   justify-content: space-between;
-}
+} */
 
 form {
   background-color: #d9a404;
@@ -61,7 +74,6 @@ textarea {
   color: #d91895;
   font-size: 3.5vh;
   text-align: justify;
-  /* text-shadow: 1px 1px 1px #ffb633; */
 }
 
 .navbar li {
