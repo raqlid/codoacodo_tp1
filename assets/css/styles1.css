@@ -1,6 +1,11 @@
 * {
     box-sizing: border-box;
   }
+  @font-face {
+    font-family: 'MiFuentePersonalizada';
+    src: url('../fonts/Roboto-Bold.ttf'),
+    /* Agrega más formatos si es necesario, dependiendo de la variedad de formatos de tu fuente. */
+  }
   
   /* Style the body */
   body {
@@ -12,10 +17,26 @@
   .header {
     padding: 60px;
     text-align: center;
-    background: #38195a;
+    background: #38195a  url('../images/fondo\ claro.png')  no-repeat center center;
+    background-size: 100% 100%;
     color: white;
     border-block-style: solid;
     border-block-color: pink;
+  }
+  .header h1{
+    font-family: 'MiFuentePersonalizada';color: #d91895;
+  }
+  
+  .header p{
+    font-family: 'MiFuentePersonalizada';color: #d91895;
+  }
+
+  #weather-info {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    font-family: Arial, sans-serif;
   }
   
   /* Style the top navigation bar */
@@ -74,7 +95,9 @@
       display: flex;
       flex-wrap: wrap;
   }
-  
+  .mi-seccion-left p{
+    font-family: 'MiFuentePersonalizada';font-size: 12px;
+  }
   
   .mi-seccion-center {
       padding: 10px;
@@ -88,6 +111,9 @@
       flex-wrap: wrap;
   }
   
+  .mi-seccion-center p{
+    font-family: 'MiFuentePersonalizada';font-size: 12px;
+  }
   .mi-seccion-right {
       padding: 10px;
       /*flex: 50%;
@@ -98,14 +124,57 @@
       display: flex;
       flex-wrap: wrap;
   }
-  
+  .mi-seccion-right p{
+    font-family: 'MiFuentePersonalizada';font-size: 12px;
+  }
   /* Footer */
-  .footer {
+  /*.footer {
     padding: 20px;
     text-align: center;
     background: #38195a;
-  }
-  
+  }*/
+
+  /* Estilos generales del footer */
+/* Estilos generales del footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #38195a;
+  color: white;
+  display: flex;
+  justify-content: space-around; /* Distribuir las secciones de manera uniforme */
+  flex-wrap: wrap; /* Permitir el ajuste de varias secciones en pantallas pequeñas */
+}
+
+/* Estilos para las secciones del footer */
+.footer-section {
+  flex: 1; /* Ocupar el mismo espacio en la fila */
+  margin: 0 10px; /* Agregar un margen entre las secciones */
+}
+
+/* Estilos para los enlaces de navegación en el footer */
+.footer-nav {
+  list-style-type: none;
+  padding: 0;
+  text-align: left; /* Alinear los enlaces a la izquierda */
+}
+
+.footer-nav li {
+  margin-bottom: 8px; /* Espaciado entre elementos de la lista */
+}
+
+/* Estilos para los iconos sociales */
+.social-icons img {
+  width: 30px;
+  margin: 0 5px;
+}
+
+/* Estilos para el icono especial */
+.footer-section img {
+  width: 50px;
+  height: 50px;
+}
+
   .row img {
       max-width: 100%;
       height: auto;
