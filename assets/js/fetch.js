@@ -1,7 +1,14 @@
 document.addEventListener("DOMContentLoaded", async () => {
     try {
+      console.log("Fetching location...");
       const position = await getCurrentLocation();
+      console.log("Position:", position);
+      
+      console.log("Fetching weather data...");
       const weatherData = await getWeatherData(position.coords.latitude, position.coords.longitude);
+      console.log("Weather Data:", weatherData);
+  
+      console.log("Displaying weather info...");
       displayWeatherInfo(weatherData);
     } catch (error) {
       console.error('Error:', error);
@@ -26,10 +33,16 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
   
   function displayWeatherInfo(data) {
-    const temperature = data.main.temp;
-    const city = data.name;
-  
     const weatherInfoElement = document.getElementById('weather-info');
-    weatherInfoElement.innerHTML = `Clima en ${city}: ${temperature}°C`;
+    
+    if (data && data.main && data.name) {
+      const temperature = data.main.temp;
+      const city = data.name;
+      weatherInfoElement.innerHTML = `Clima en ${city}: ${temperature}°C`;
+      console.log("Weather info displayed successfully.");
+    } else {
+      weatherInfoElement.innerHTML = "Información no disponible";
+      console.log("Weather info not available.");
+    }
   }
   
