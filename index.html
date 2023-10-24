@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="assets/css/styles1.css">
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
     <title>Haciendo Musica</title>
-    <script src="../codoacodo_tp1/assets/js/fetch.js"></script>
 </head>
 <body>
 
@@ -14,7 +13,6 @@
 <div class="header">
   <h1>HACIENDO MUSICA</h1>
   <p>Tu sitio para <b>aprender</b>.</p>
-  <div id="weather-info"></div>
 </div>
 
 <!-- Navigation Bar -->
@@ -88,10 +86,10 @@
   </div>
 
   <div class="footer-section">
-    <img src="../codoacodo_tp1/assets/images/logohaciendomusica.png" alt="Icono">
+    <!--<img src="../codoacodo_tp1/assets/images/logohaciendomusica.png" alt="Icono">-->
+    <div id="openweathermap-widget-14"></div>
+<script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 14,cityid: '3435910',appid: '87200acd511c16de98a894d039fa9911',units: 'metric',containerid: 'openweathermap-widget-14',  });  (function() {var script = document.createElement('script');script.async = true;script.charset = "utf-8";script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();</script>
   </div>
 </div>
-
-
 </body>
 </html>

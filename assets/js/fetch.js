@@ -25,9 +25,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
   
   async function getWeatherData(latitude, longitude) {
-    const apiKey = '51a1570ccc8b61d41f4aecdec8f861cd'; // Reemplaza con tu clave de API
-    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
-  
+    const apiKey = '87200acd511c16de98a894d039fa9911'; // Reemplaza con tu clave de API
+    const url = `api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&APPID=${apiKey}&units=metric`;
     const response = await fetch(url);
     return response.json();
   }
