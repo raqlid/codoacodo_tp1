@@ -21,6 +21,16 @@ html{
     margin: auto;  
 }
 
+@font-face {
+    font-family: myFont;
+    src: url(../fonts/Roboto-Medium.ttf);
+  }
+  
+  html {
+    font-family: myFont;
+  }
+
+
 h1 {
     font-size: 3em;
 }
@@ -203,3 +213,19 @@ li.dropdown {
 .unordered-list li{
     padding: 2vw;
 }
+
+#iframe-location{
+    text-align: center;
+    padding: 2%;
+}
+
+footer p{
+    opacity: 0.5;
+}
+
+#social-networks{
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+}
+
