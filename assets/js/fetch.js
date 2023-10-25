@@ -1,47 +1,40 @@
-document.addEventListener("DOMContentLoaded", async () => {
-    try {
-      console.log("Fetching location...");
-      const position = await getCurrentLocation();
-      console.log("Position:", position);
-      
-      console.log("Fetching weather data...");
-      const weatherData = await getWeatherData(position.coords.latitude, position.coords.longitude);
-      console.log("Weather Data:", weatherData);
+document.addEventListener("DOMContentLoaded", function () {
+  // Realiza la consulta fetch y muestra el resultado en el div con id "resultado"
+  fetchDataAndDisplay();
+});
+
+function fetchDataAndDisplay() {
+  const url = 'https://api.weatherapi.com/v1/current.json?key=d97f0bedbd2344ff840153722232410&q=Buenos aires&aqi=no';
   
-      console.log("Displaying weather info...");
-      displayWeatherInfo(weatherData);
-    } catch (error) {
-      console.error('Error:', error);
-    }
-  });
-  
-  async function getCurrentLocation() {
-    return new Promise((resolve, reject) => {
-      navigator.geolocation.getCurrentPosition(
-        position => resolve(position),
-        error => reject(error)
-      );
-    });
-  }
-  
-  async function getWeatherData(latitude, longitude) {
-    const apiKey = '87200acd511c16de98a894d039fa9911'; // Reemplaza con tu clave de API
-    const url = `api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&APPID=${apiKey}&units=metric`;
-    const response = await fetch(url);
-    return response.json();
-  }
-  
-  function displayWeatherInfo(data) {
-    const weatherInfoElement = document.getElementById('weather-info');
-    
-    if (data && data.main && data.name) {
-      const temperature = data.main.temp;
-      const city = data.name;
-      weatherInfoElement.innerHTML = `Clima en ${city}: ${temperature}°C`;
-      console.log("Weather info displayed successfully.");
-    } else {
-      weatherInfoElement.innerHTML = "Información no disponible";
-      console.log("Weather info not available.");
-    }
-  }
-  
+  fetch(url)
+  .then(response => response.json())
+  .then(data => {
+      // Llama a la función displayData para mostrar los resultados
+      displayData(data);
+
+      // Mostrar el icono del clima
+      const imgElement = document.getElementById('climaIcono');
+      imgElement.src = `http:${data.current.condition.icon}`;
+  })
+  .catch(error => console.error('Error:', error));
+}
+
+function displayData(data) {
+  // Accede al div por su id
+  const resultadoDiv = document.getElementById('resultado');
+
+  // Construye el contenido HTML con los datos del JSON
+  const htmlContent = `
+      <h2>Ubicación</h2>
+      <ul>
+          <li><strong>Nombre:</strong> ${data.location.name}</li>
+      </ul>
+      <ul>
+          <li><strong>Última Actualización:</strong> ${data.current.last_updated}</li>
+          <li><strong>Temperatura (C):</strong> ${data.current.temp_c}</li>
+      </ul>
+  `;
+
+  // Inserta el contenido HTML en el div
+  resultadoDiv.innerHTML = htmlContent;
+}
