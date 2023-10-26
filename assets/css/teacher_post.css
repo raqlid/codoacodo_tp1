@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+/* Estas son variables que utilizo para los colores que se habían definido.*/
 :root {
     --fucsiaOscuro: #D91895;
     --morado: #38195A;
@@ -13,6 +14,7 @@
     --doradoClaro: #D9A404;
 }
 
+/*Aquí establezco la imágen de fondo de la página.*/
 html {
     background-image: url('../images/fondo claro.png');
     background-repeat: no-repeat;
@@ -21,6 +23,7 @@ html {
     margin: auto;
 }
 
+/*Aquí establezco la fuente linkeandola a la que habíamos propuesto.*/
 @font-face {
     font-family: myFont;
     src: url(../fonts/Roboto-Medium.ttf);
@@ -29,6 +32,7 @@ html {
 html {
     font-family: myFont;
 }
+
 
 
 h1 {
@@ -57,12 +61,12 @@ a {
 
 body {
     font-size: 18px;
-    width: 90%;
+    width: 90%; /*Esto permite que se vea en los bordes la imagen de fondo.*/
     margin: auto;
 }
 
 header {
-    background-color: var(--naranjaClaro);
+    background-color: var(--naranjaClaro); /*Aquí muestro como se usa una variable, un color.*/
     text-align: center;
     color: var(--fucsiaOscuro);
     padding-top: 5vw;
@@ -111,6 +115,7 @@ img {
     padding-bottom: 2%;
 }
 
+/*Aquí comienza el css para la barra de navegación.*/
 ul {
     list-style-type: none;
     overflow: hidden;
@@ -122,6 +127,7 @@ li {
     float: left;
 }
 
+/*dropbtn es el desplegable.*/
 li a,
 .dropbtn {
     display: inline-block;
@@ -179,7 +185,7 @@ li.dropdown {
 
 @media screen and (max-width: 600px) {
     ul{
-        opacity: 90%;
+        opacity: 90%; /*Permite la transparencia.*/
     }
 
     ul li {
@@ -199,7 +205,10 @@ li.dropdown {
     .dropbtn {
         padding: 2vw;
     }
-}
+} /*Lo anterior permite la responsividad de la barra de navegación.*/
+
+/*Aquí termina el css para la barra de navegación.*/
+
 
 .services {
     display: flex;
