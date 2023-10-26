@@ -82,6 +82,7 @@ header {
     border-top: solid 0.5vh white;
     border-bottom: solid 0.5vh white;
     border-radius: 5vh;
+    font-size: 1.5em;
 }
 
 #certified {
