@@ -4,54 +4,119 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contactanos</title>
+    <link
+      rel="icon"
+      href="./../assets/images/favicon.ico"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="./../assets/css/contact.css" />
   </head>
   <body>
-    <div class="container">
-      <nav>
-        <ul class="navbar">
-          <li><a href="./../index.html">Inicio</a></li>
-          <li><a href="./proyecto.html">Cursos</a></li>
-          <li><a href="./contact.html">Contacto</a></li>
-        </ul>
-      </nav>
-      <main>
-        <h1>Contactanos</h1>
-        <div class="description">
-          "Tu opinión es fundamental para nosotros. En nuestro constante
-          compromiso por ofrecerte la mejor experiencia, nos encantaría conocer
-          tu perspectiva sobre nuestra página. Queremos saber qué aspectos te
-          gustaron, qué elementos podríamos mejorar y cualquier otra idea que se
-          te ocurra para hacer de este sitio web un lugar aún más increíble.
-          Valoramos cada comentario y sugerencia que nos puedas ofrecer."
-        </div>
+    <header class="header">
+      <h1>HACIENDO MUSICA</h1>
+      <p>Tu sitio para <b>aprender</b>.</p>
+    </header>
 
-        <form>
-          <label
-            >Nombre:<input
-              type="text"
-              placeholder="Walter Marcos Crespín"
-              name="nombre"
-          /></label>
-          <label
-            >Email:
-            <input type="email" placeholder="somebody@gmail.com" name="email"
-          /></label>
-          <label
-            >Comentario:
-            <textarea
-              placeholder="La página me parecio genial..."
-              name="comentario"
-            ></textarea>
-          </label>
-          <button type="submit">Enviar</button>
-          <button type="reset">Limpiar Campos</button>
-        </form>
-      </main>
-      <footer>
-        <p>Haciendo Música © 2023.</p>
-        <h4>Grupo 13 - Python</h4>
-      </footer>
-    </div>
+    <nav id="inicio">
+      <ul>
+        <li class="clearfix">
+          <a href="../index.html" id="a-start"
+            ><img
+              id="img-start"
+              src="../assets/images/logohaciendomusica.png"
+              style="width: 2.2rem"
+              alt="logotipo"
+          /></a>
+        </li>
+        <li><a href="./news.html">Novedades</a></li>
+        <li><a href="./proyecto.html">Profesores</a></li>
+        <li><a href="./contact.html">Contacto</a></li>
+        <li><a href="./about.html">Sobre nosotros</a></li>
+        <!-- <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">En esta clase</a>
+          <div class="dropdown-content">
+            <a href="#service1">Servicios ofrecidos</a>
+            <a href="#the-trainer">Profesor</a>
+            <a href="#contact">Contacto</a>
+            <a href="#location">Ubicación</a>
+          </div>
+        </li> -->
+      </ul>
+    </nav>
+    <main>
+      <h2 class="contact">Contactanos</h2>
+      <p class="description">
+        "Tu opinión es fundamental para nosotros. En nuestro constante
+        compromiso por ofrecerte la mejor experiencia, nos encantaría conocer tu
+        perspectiva sobre nuestra página. Queremos saber qué aspectos te
+        gustaron, qué elementos podríamos mejorar y cualquier otra idea que se
+        te ocurra para hacer de este sitio web un lugar aún más increíble.
+        Valoramos cada comentario y sugerencia que nos puedas ofrecer."
+      </p>
+
+      <form>
+        <label
+          >Nombre:<input
+            type="text"
+            placeholder="Walter Marcos Crespín"
+            name="nombre"
+        /></label>
+        <label
+          >Email:
+          <input type="email" placeholder="somebody@gmail.com" name="email"
+        /></label>
+        <label
+          >Comentario:
+          <textarea
+            placeholder="La página me parecio genial..."
+            name="comentario"
+          ></textarea>
+        </label>
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpiar Campos</button>
+      </form>
+    </main>
   </body>
+
+  <footer class="footer">
+    <div class="footer-section">
+      <h2>Redes Sociales</h2>
+      <div class="social-icons">
+        <a href="#" target="_blank"
+          ><img src="./../assets/images/instagram.svg" alt="Instagram"
+        /></a>
+        <a href="#" target="_blank"
+          ><img src="./../assets/images/facebook.svg" alt="Facebook"
+        /></a>
+        <a href="#" target="_blank"
+          ><img src="./../assets/images/x.svg" alt="Twitter"
+        /></a>
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <h2>Navegación</h2>
+      <ul class="footer-nav">
+        <li><a href="./../index.html">Inicio</a></li>
+        <li><a href="./proyecto.html">Profesores</a></li>
+        <li><a href="./contact.html">Contacto</a></li>
+        <!-- Agrega más elementos según sea necesario -->
+      </ul>
+    </div>
+
+    <!-- <div class="footer-section">
+      <a
+        class="weatherwidget-io"
+        href="https://forecast7.com/es/n34d60n58d38/buenos-aires/"
+        data-label_1="BUENOS AIRES"
+        data-label_2="WEATHER"
+        data-font="Roboto"
+        data-icons="Climacons Animated"
+        data-mode="Current"
+        data-theme="original"
+        data-basecolor="#38195a"
+        >BUENOS AIRES WEATHER</a
+      >
+    </div> -->
+  </footer>
 </html>
