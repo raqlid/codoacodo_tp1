@@ -1,43 +1,158 @@
-body {
-  background-color: #38195a;
-  color: #ffa400;
-  font-family: sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-image: url("./../images/partitura.jpg");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.container {
-  background-color: #38195af5;
-  color: #ffa400;
-  font-family: sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 60%;
-  margin-bottom: 5vh;
-  margin-top: 8vh;
+/* Estas son variables que utilizo para los colores que se habían definido.*/
+:root {
+  --fucsiaOscuro: #d91895;
+  --morado: #38195a;
+  --naranjaOscuro: #ffa400;
+  --naranjaClaro: #ffb633;
+  --doradoOscuro: #cc8300;
+  --doradoClaro: #d9a404;
+}
+
+html {
+  font-family: myFont;
 }
 
 h1 {
-  font-size: 5vh;
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2.5em;
+  margin-bottom: 1em;
+}
+
+h3 {
+  font-size: 2em;
+  margin-bottom: 2%;
+  color: var(--morado);
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
+p,
+a {
+  font-size: 1em;
+}
+
+body {
+  font-size: 18px;
+  /*Esto permite que se vea en los bordes la imagen de fondo.*/
+  margin: auto;
 }
 
 main {
-  max-width: 80%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
 }
 
-/* div {
-  justify-content: space-between;
-} */
+/*Aquí establezco la imágen de fondo de la página.*/
+html {
+  background-image: url("../images/fondo claro.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: auto;
+}
+
+@font-face {
+  font-family: myFont;
+  src: url(../fonts/Roboto-Medium.ttf);
+}
+
+html {
+  font-family: myFont;
+}
+
+ul {
+  list-style-type: none;
+  overflow: hidden;
+  background-color: var(--morado);
+}
+
+li {
+  float: left;
+}
+
+/*dropbtn es el desplegable.*/
+li a,
+.dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 1vh 1vw;
+  font-size: 2.5vh;
+  margin: 0;
+  text-decoration: none;
+}
+
+li #a-start {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  background-color: var(--fucsiaOscuro);
+}
+
+li a:hover,
+.dropdown:hover .dropbtn {
+  background-color: var(--fucsiaOscuro);
+  width: 100%;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--fucsiaOscuro);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px var(--morado);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.contact {
+  margin-top: 1em;
+
+  color: var(--morado);
+}
 
 form {
-  background-color: #d9a404;
-  border: 1px solid #d91895;
+  background-color: var(--doradoClaro);
+  border: 1px solid var(--fucsiaOscuro);
   padding: 8px;
-  color: #38195a;
-  font-size: 3vh;
+  color: var(--morado);
+  width: 100%;
+  /* font-size: 3vh; */
 }
 
 label input,
@@ -52,8 +167,8 @@ textarea[placeholder] {
 
 input,
 textarea {
-  background-color: #d91895;
-  border: 1px solid #ffb633;
+  background-color: var(--fucsiaOscuro);
+  border: 1px solid var(--naranjaClaro);
   border-radius: 3px;
   width: 100%;
   padding: 12px 20px;
@@ -66,47 +181,107 @@ textarea {
 textarea {
   height: 150px;
   resize: none;
-  font-family: sans-serif;
+  font-family: myFont;
 }
 
 .description {
-  margin-bottom: 5vh;
-  color: #d91895;
-  font-size: 3.5vh;
+  margin-bottom: 2em;
+  color: var(--fucsiaOscuro);
   text-align: justify;
-}
-
-.navbar li {
-  display: inline;
-}
-
-nav a:link {
-  font-size: 3.2vh;
-  margin: 0.2vw;
-  color: #ffb633;
-}
-
-nav a:visited {
-  color: #d91895;
 }
 
 button {
   margin: 1vh;
   padding: 0.5vh;
   text-decoration: none;
-  font-size: 2.5vh;
-  color: #38195a;
+  /* font-size: 2.5vh; */
+  font-size: 1em;
+  color: var(--morado);
   cursor: pointer;
-  border: 1px solid #d91895;
+  border: 1px solid var(--fucsiaOscuro);
   border-radius: 3px;
 }
 
 footer {
+  margin-top: 2em;
+  padding: 20px;
   text-align: center;
-  padding: 3vh;
-  font-size: 2.5vh;
+  background: var(--morado);
+  color: white;
+  display: flex;
+  justify-content: space-around; /* Distribuir las secciones de manera uniforme */
+  flex-wrap: wrap; /* Permitir el ajuste de varias secciones en pantallas pequeñas */
 }
 
-footer h4 {
-  margin-top: -1vh;
+/* Estilos para las secciones del footer */
+.footer-section {
+  flex: 1; /* Ocupar el mismo espacio en la fila */
+  margin: 0 10px; /* Agregar un margen entre las secciones */
+}
+
+/* Estilos para los enlaces de navegación en el footer */
+.footer-nav {
+  list-style-type: none;
+  padding: 0;
+  text-align: left; /* Alinear los enlaces a la izquierda */
+}
+
+.footer-nav li {
+  margin-bottom: 8px; /* Espaciado entre elementos de la lista */
+}
+
+/* Estilos para los iconos sociales */
+.social-icons img {
+  width: 30px;
+  margin: 0 5px;
+}
+
+/* Estilos para el icono especial */
+.footer-section img {
+  width: 50px;
+  height: 50px;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 60px;
+  text-align: center;
+  background: var(--morado) url("../images/fondo\ claro.png") no-repeat center
+    center;
+  background-size: 100% 100%;
+  color: white;
+  border-block-style: solid;
+  border-block-color: pink;
+  font-family: myFont;
+}
+.header h1 {
+  color: var(--fucsiaOscuro);
+}
+
+.header p {
+  color: var(--fucsiaOscuro);
+}
+
+@media screen and (max-width: 600px) {
+  ul {
+    opacity: 90%; /*Permite la transparencia.*/
+  }
+
+  ul li {
+    float: none;
+    text-align: center;
+  }
+
+  li.dropdown {
+    display: block;
+  }
+
+  .dropdown-content {
+    min-width: 90%;
+  }
+
+  li a,
+  .dropbtn {
+    padding: 2vw;
+  }
 }

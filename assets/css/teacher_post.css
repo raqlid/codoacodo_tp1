@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+/* Estas son variables que utilizo para los colores que se habían definido.*/
 :root {
     --fucsiaOscuro: #D91895;
     --morado: #38195A;
@@ -13,22 +14,25 @@
     --doradoClaro: #D9A404;
 }
 
-html{
+/*Aquí establezco la imágen de fondo de la página.*/
+html {
     background-image: url('../images/fondo claro.png');
     background-repeat: no-repeat;
-    background-attachment: fixed;  
-    background-size:cover;
-    margin: auto;  
+    background-attachment: fixed;
+    background-size: cover;
+    margin: auto;
 }
 
+/*Aquí establezco la fuente linkeandola a la que habíamos propuesto.*/
 @font-face {
     font-family: myFont;
     src: url(../fonts/Roboto-Medium.ttf);
-  }
-  
-  html {
+}
+
+html {
     font-family: myFont;
-  }
+}
+
 
 
 h1 {
@@ -36,32 +40,34 @@ h1 {
 }
 
 h2 {
-    font-size: 2.5em;
+    font-size: 2em;
 }
 
 h3 {
-    font-size: 2em;
+    font-size: 1.6em;
     margin-bottom: 2%;
     color: var(--morado);
 }
 
 h4 {
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
 
-p, a {
+p,
+a {
     font-size: 1em;
 }
 
 
 body {
     font-size: 18px;
-    width: 90%;
+    width: 90%; /*Esto permite que se vea en los bordes la imagen de fondo.*/
     margin: auto;
+
 }
 
 header {
-    background-color: var(--naranjaClaro);
+    background-color: var(--naranjaClaro); /*Aquí muestro como se usa una variable, un color.*/
     text-align: center;
     color: var(--fucsiaOscuro);
     padding-top: 5vw;
@@ -81,6 +87,7 @@ header {
     border-top: solid 0.5vh white;
     border-bottom: solid 0.5vh white;
     border-radius: 5vh;
+    font-size: 1.5em;
 }
 
 #certified {
@@ -109,33 +116,43 @@ img {
     padding-bottom: 2%;
 }
 
-#img-start{
-    margin-top: 0;
-    padding-bottom: 0;
-}
-
+/*Aquí comienza el css para la barra de navegación.*/
 ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
     overflow: hidden;
     background-color: var(--morado);
 }
+
 
 li {
     float: left;
 }
 
-li a, .dropbtn {
+/*dropbtn es el desplegable.*/
+li a,
+.dropbtn {
     display: inline-block;
     color: white;
     text-align: center;
-    padding: 0.7vw 0.8vw;
+    padding: 1vh 1vw;
+    font-size: 2.5vh;
+    margin: 0;
     text-decoration: none;
 }
 
-li a:hover,.dropdown:hover .dropbtn {
+li #a-start {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
     background-color: var(--fucsiaOscuro);
+}
+
+li a:hover,
+.dropdown:hover .dropbtn {
+    background-color: var(--fucsiaOscuro);
+    width: 100%;
 }
 
 
@@ -168,12 +185,40 @@ li.dropdown {
     display: block;
 }
 
+@media screen and (max-width: 600px) {
+    ul{
+        opacity: 90%; /*Permite la transparencia.*/
+    }
+
+    ul li {
+        float: none;
+        text-align: center;
+    }
+
+    li.dropdown {
+        display: block;
+    }
+
+    .dropdown-content {
+        min-width: 90%;
+    }
+
+    li a,
+    .dropbtn {
+        padding: 2vw;
+    }
+} /*Lo anterior permite la responsividad de la barra de navegación.*/
+
+/*Aquí termina el css para la barra de navegación.*/
+
+
 .services {
     display: flex;
     flex-flow: row wrap;
     color: white;
     background-color: var(--morado);
     border-radius: 2em;
+    margin-bottom: 2em;
 }
 
 .service {
@@ -195,7 +240,7 @@ li.dropdown {
     }
 }
 
-.service h3{
+.service h3 {
     color: var(--fucsiaOscuro);
     text-align: center;
 }
@@ -205,27 +250,54 @@ li.dropdown {
     text-align: justify;
 }
 
-.unordered-list{
+.unordered-list {
     margin: 2vw;
     list-style-type: none;
 }
 
-.unordered-list li{
+.unordered-list li {
     padding: 2vw;
 }
 
-#iframe-location{
+#why-choose-us .unordered-list{
+    background-color: whitesmoke;
+    border-radius: 2em;
+    opacity: 90%;
+    padding-top: 3em;
+}
+
+#why-choose-us .unordered-list li{
+    padding-left: 5em;
+    padding-right: 5em;
+}
+
+
+#iframe-location {
     text-align: center;
     padding: 2%;
 }
 
-footer p{
+footer p {
     opacity: 0.5;
 }
 
-#social-networks{
+#social-networks {
     position: fixed;
     bottom: 1.5rem;
     right: 1.5rem;
+}
+
+.call-to-action{
+    background-color: var(--naranjaOscuro);
+    font-size: larger;
+    margin: 2em;
+    padding: 1.5em;
+    border: var(--fucsiaOscuro) solid 1.5rem;
+    text-indent: 0.5em;
+    text-align: justify;
+}
+
+.call-to-action p{
+    padding-bottom: 1.5em;
 }
 
