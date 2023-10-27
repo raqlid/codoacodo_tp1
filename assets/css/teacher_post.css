@@ -40,17 +40,17 @@ h1 {
 }
 
 h2 {
-    font-size: 2.5em;
+    font-size: 2em;
 }
 
 h3 {
-    font-size: 2em;
+    font-size: 1.6em;
     margin-bottom: 2%;
     color: var(--morado);
 }
 
 h4 {
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
 
 p,
@@ -63,6 +63,7 @@ body {
     font-size: 18px;
     width: 90%; /*Esto permite que se vea en los bordes la imagen de fondo.*/
     margin: auto;
+
 }
 
 header {
@@ -216,6 +217,7 @@ li.dropdown {
     color: white;
     background-color: var(--morado);
     border-radius: 2em;
+    margin-bottom: 2em;
 }
 
 .service {
@@ -256,6 +258,19 @@ li.dropdown {
     padding: 2vw;
 }
 
+#why-choose-us .unordered-list{
+    background-color: whitesmoke;
+    border-radius: 2em;
+    opacity: 90%;
+    padding-top: 3em;
+}
+
+#why-choose-us .unordered-list li{
+    padding-left: 5em;
+    padding-right: 5em;
+}
+
+
 #iframe-location {
     text-align: center;
     padding: 2%;
@@ -270,3 +285,18 @@ footer p {
     bottom: 1.5rem;
     right: 1.5rem;
 }
+
+.call-to-action{
+    background-color: var(--naranjaOscuro);
+    font-size: larger;
+    margin: 2em;
+    padding: 1.5em;
+    border: var(--fucsiaOscuro) solid 1.5rem;
+    text-indent: 0.5em;
+    text-align: justify;
+}
+
+.call-to-action p{
+    padding-bottom: 1.5em;
+}
+
