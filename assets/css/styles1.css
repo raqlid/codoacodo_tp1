@@ -7,6 +7,15 @@
     /* Agrega más formatos si es necesario, dependiendo de la variedad de formatos de tu fuente. */
   }
   
+  /* Estas son variables que utilizo para los colores que se habían definido.*/
+:root {
+  --fucsiaOscuro: #D91895;
+  --morado: #38195A;
+  --naranjaOscuro: #ffa400;
+  --naranjaClaro: #FFB633;
+  --doradoOscuro: #cc8300;
+  --doradoClaro: #D9A404;
+}
   /* Style the body */
   body {
     font-family: Arial; /*Modificarloooooooo*/
@@ -21,7 +30,7 @@
     background-size: 100% 100%;
     color: white;
     border-block-style: solid;
-    border-block-color: pink;
+    /*border-block-color: pink;*/
   }
   .header h1{
     font-family: 'MiFuentePersonalizada';color: #d91895;
@@ -39,26 +48,98 @@
     font-family: Arial, sans-serif;
   }
   
-  /* Style the top navigation bar */
-  .navbar {
-    display: flex;
-    background-color: #38195a;
+  /*Aquí comienza el css para la barra de navegación.*/
+ul {
+  list-style-type: none;
+  overflow: hidden;
+  background-color: var(--morado);
+}
+
+
+li {
+  float: left;
+}
+
+/*dropbtn es el desplegable.*/
+li a,
+.dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 1vh 1vw;
+  font-size: 2.5vh;
+  margin: 0;
+  text-decoration: none;
+}
+
+li #a-start {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  background-color: var(--fucsiaOscuro);
+}
+
+li a:hover,
+.dropdown:hover .dropbtn {
+  background-color: var(--fucsiaOscuro);
+  width: 100%;
+}
+
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--fucsiaOscuro);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px var(--morado);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  ul{
+      opacity: 90%; /*Permite la transparencia.*/
   }
-  
-  /* Style the navigation bar links */
-  .navbar a {
-    color: white;
-    padding: 14px 20px;
-    text-decoration: none;
-    text-align: center;
+
+  ul li {
+      float: none;
+      text-align: center;
   }
-  
-  /* Change color on hover */
-  .navbar a:hover {
-    background-color: #d91895;
-    color: black;
+
+  li.dropdown {
+      display: block;
   }
-  
+
+  .dropdown-content {
+      min-width: 90%;
+  }
+
+  li a,
+  .dropbtn {
+      padding: 2vw;
+  }
+} 
   /* Column container */
   .row {  
     display: flex;
