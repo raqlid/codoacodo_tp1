@@ -23,8 +23,8 @@ h1 {
 }
 
 h2 {
-  font-size: 2.5em;
-  margin-bottom: 1em;
+  font-size: 2em;
+  margin-bottom: 0.5em;
 }
 
 h3 {
@@ -46,6 +46,26 @@ body {
   font-size: 18px;
   /*Esto permite que se vea en los bordes la imagen de fondo.*/
   margin: auto;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 60px;
+  text-align: center;
+  background: var(--morado) url("../images/fondo\ claro.png") no-repeat center
+    center;
+  background-size: 100% 100%;
+  color: white;
+  border-block-style: solid;
+  border-block-color: pink;
+  font-family: myFont;
+}
+.header h1 {
+  color: var(--fucsiaOscuro);
+}
+
+.header p {
+  color: var(--fucsiaOscuro);
 }
 
 main {
@@ -152,7 +172,6 @@ form {
   padding: 8px;
   color: var(--morado);
   width: 100%;
-  /* font-size: 3vh; */
 }
 
 label input,
@@ -194,7 +213,6 @@ button {
   margin: 1vh;
   padding: 0.5vh;
   text-decoration: none;
-  /* font-size: 2.5vh; */
   font-size: 1em;
   color: var(--morado);
   cursor: pointer;
@@ -204,7 +222,7 @@ button {
 
 footer {
   margin-top: 2em;
-  padding: 20px;
+  padding: 1.5em;
   text-align: center;
   background: var(--morado);
   color: white;
@@ -216,7 +234,7 @@ footer {
 /* Estilos para las secciones del footer */
 .footer-section {
   flex: 1; /* Ocupar el mismo espacio en la fila */
-  margin: 0 10px; /* Agregar un margen entre las secciones */
+  margin: 0 auto; /* Agregar un margen entre las secciones */
 }
 
 /* Estilos para los enlaces de navegación en el footer */
@@ -224,42 +242,51 @@ footer {
   list-style-type: none;
   padding: 0;
   text-align: left; /* Alinear los enlaces a la izquierda */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer-nav li {
-  margin-bottom: 8px; /* Espaciado entre elementos de la lista */
+  margin-bottom: 0.5em; /* Espaciado entre elementos de la lista */
 }
 
 /* Estilos para los iconos sociales */
-.social-icons img {
+/* .social-icons img {
   width: 30px;
   margin: 0 5px;
+} */
+
+.footer-section .footer-social-icons img {
+  width: 7vh;
+  display: inline;
+  /* display: block;
+  margin-left: auto;
+  margin-right: auto; */
 }
 
-/* Estilos para el icono especial */
+.footer-section .footer-social-icons p {
+  margin: 0.3vw;
+  letter-spacing: 0.2vw;
+}
+
 .footer-section img {
-  width: 50px;
-  height: 50px;
+  width: 15vh;
 }
 
-/* Header/logo Title */
-.header {
-  padding: 60px;
-  text-align: center;
-  background: var(--morado) url("../images/fondo\ claro.png") no-repeat center
-    center;
-  background-size: 100% 100%;
-  color: white;
-  border-block-style: solid;
-  border-block-color: pink;
-  font-family: myFont;
-}
-.header h1 {
-  color: var(--fucsiaOscuro);
+footer #pokeApi #pokeName {
+  font-size: larger;
 }
 
-.header p {
-  color: var(--fucsiaOscuro);
+footer #pokeApi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer div h2 {
+  margin-bottom: 0.5em;
 }
 
 @media screen and (max-width: 600px) {
