@@ -58,16 +58,22 @@ a {
     font-size: 1em;
 }
 
+#spacing{
+    width: 90%;
+    margin: auto;
+
+}
 
 body {
     font-size: 18px;
-    width: 90%; /*Esto permite que se vea en los bordes la imagen de fondo.*/
+    /*Esto permite que se vea en los bordes la imagen de fondo.*/
     margin: auto;
 
 }
 
 header {
-    background-color: var(--naranjaClaro); /*Aquí muestro como se usa una variable, un color.*/
+    background-color: var(--naranjaClaro);
+    /*Aquí muestro como se usa una variable, un color.*/
     text-align: center;
     color: var(--fucsiaOscuro);
     padding-top: 5vw;
@@ -186,8 +192,9 @@ li.dropdown {
 }
 
 @media screen and (max-width: 600px) {
-    ul{
-        opacity: 90%; /*Permite la transparencia.*/
+    ul {
+        opacity: 90%;
+        /*Permite la transparencia.*/
     }
 
     ul li {
@@ -207,7 +214,9 @@ li.dropdown {
     .dropbtn {
         padding: 2vw;
     }
-} /*Lo anterior permite la responsividad de la barra de navegación.*/
+}
+
+/*Lo anterior permite la responsividad de la barra de navegación.*/
 
 /*Aquí termina el css para la barra de navegación.*/
 
@@ -259,14 +268,16 @@ li.dropdown {
     padding: 2vw;
 }
 
-#why-choose-us .unordered-list{
+#why-choose-us .unordered-list {
+    width: 90%;
+    margin: auto;
     background-color: whitesmoke;
     border-radius: 2em;
     opacity: 90%;
     padding-top: 3em;
 }
 
-#why-choose-us .unordered-list li{
+#why-choose-us .unordered-list li {
     padding-left: 5em;
     padding-right: 5em;
 }
@@ -277,7 +288,7 @@ li.dropdown {
     padding: 2%;
 }
 
-footer p {
+#img-bg{
     opacity: 0.5;
 }
 
@@ -285,9 +296,10 @@ footer p {
     position: fixed;
     bottom: 1.5rem;
     right: 1.5rem;
+    z-index: 1;
 }
 
-.call-to-action{
+.call-to-action {
     background-color: var(--naranjaOscuro);
     font-size: larger;
     margin: 2em;
@@ -295,9 +307,113 @@ footer p {
     border: var(--fucsiaOscuro) solid 1.5rem;
     text-indent: 0.5em;
     text-align: justify;
+    border-radius: 2vw 2vw 0 0;
 }
 
-.call-to-action p{
+.call-to-action p {
     padding-bottom: 1.5em;
 }
 
+/* Aquí comienzan los estilos del formulario*/
+
+#call-to-action2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    width: 93%;
+    font-size: larger;
+}
+
+
+form {
+    background-color: var(--naranjaOscuro);
+    padding: 1.5em;
+    border-radius: 0 0 2em 2em;
+    border: var(--fucsiaOscuro) solid 1.5rem;
+    margin-bottom: 2em;
+}
+
+label input,
+textarea {
+    margin: 1em 0;
+}
+
+form input,
+textarea[placeholder] {
+    color: white;
+}
+
+input,
+textarea {
+    background-color: var(--fucsiaOscuro);
+    border: 1px solid var(--naranjaClaro);
+    border-radius: 0.5em;
+    width: 100%;
+    padding: 1em;
+    font-size: 1em;
+    box-sizing: border-box;
+    outline: none;
+}
+
+textarea {
+    height: 10em;
+    resize: none;
+}
+
+.description {
+    margin-bottom: 2em;
+    text-align: justify;
+    text-indent: 0.5em;
+}
+
+button {
+    margin: 1vh;
+    padding: 0.5vh;
+    text-decoration: none;
+    font-size: 1em;
+    color: var(--morado);
+    cursor: pointer;
+    border: 1px solid var(--fucsiaOscuro);
+    border-radius: 0.3em;
+}
+
+footer {
+    margin-top: 2em;
+    padding: 20px;
+    text-align: center;
+    background: var(--morado);
+    color: white;
+    display: flex;
+    justify-content: space-around; /* Distribuir las secciones de manera uniforme */
+    flex-wrap: wrap; /* Permitir el ajuste de varias secciones en pantallas pequeñas */
+  }
+  
+  /* Estilos para las secciones del footer */
+  .footer-section {
+    flex: 1; /* Ocupar el mismo espacio en la fila */
+    margin: 0 10px; /* Agregar un margen entre las secciones */
+  }
+  
+  /* Estilos para los enlaces de navegación en el footer */
+  .footer-nav {
+    list-style-type: none;
+    padding: 0;
+    text-align: left; /* Alinear los enlaces a la izquierda */
+  }
+  
+  .footer-nav li {
+    margin-bottom: 8px; /* Espaciado entre elementos de la lista */
+  }
+  
+  /* Estilos para los iconos sociales */
+  .social-icons img {
+    width: 30px;
+    margin: 0 5px;
+  }
+  
+  /* Estilos para el icono especial */
+  .footer-section img {
+    width: 50px;
+    height: 50px;
+  }
