@@ -10,12 +10,11 @@
 
     <script src="https://kit.fontawesome.com/f9aa0ff918.js" crossorigin="anonymous"></script>
 
-
 </head>
 
-<div id="spacing">
+<body>
 
-    <body>
+    <div id="spacing">
         <header>
             <h1>Nombre Apellido</h1>
             <h2 id="username">username@</h2>
@@ -169,9 +168,9 @@
         <div id="call-to-action2">
             <h3>¡Contáctanos!</h3>
             <a href="https://wa.me/+5493816047101/?text=Hola, cómo está. Quisiera más información sobre las clases de canto. "
-                    target="_blank" style="margin-top: -0.5em; margin-bottom: 1em;"><img src="../assets/images/WhatsappLogo.svg" style="width: 4em;"
-                alt="whatsApp"></a>
-            
+                target="_blank" style="margin-top: -0.5em; margin-bottom: 1em;"><img
+                    src="../assets/images/WhatsappLogo.svg" style="width: 4em;" alt="whatsApp"></a>
+
             <p class="description"><strong>Contáctanos también por email</strong> para obtener más información o
                 reservar tu
                 primera clase. Estamos emocionados de trabajar contigo
@@ -205,45 +204,57 @@
                 href="https://www.freepik.es/vector-gratis/fondo-notas-ondas-sonido-pentagrama-musical_18786659.htm#query=fondo%20musical&position=0&from_view=keyword&track=ais">Imagen
                 de starline</a> en Freepik
         </p>
-    </body>
 
-</div>
+    </div>
 
 
-<footer class="footer">
-    <div class="footer-section">
-        <h2>Redes Sociales</h2>
-        <div class="social-icons">
-            <a href="#" target="_blank"><img src="./../assets/images/instagram.svg" alt="Instagram" /></a>
-            <a href="#" target="_blank"><img src="./../assets/images/facebook.svg" alt="Facebook" /></a>
-            <a href="#" target="_blank"><img src="./../assets/images/x.svg" alt="Twitter" /></a>
+    <footer class="footer">
+        <div class="footer-section">
+            <h2>Redes Sociales</h2>
+            <div class="footer-social-icons">
+                <a href="#" target="_blank"><img src="./../assets/images/instagram.svg" alt="Instagram" /></a>
+                <a href="#" target="_blank"><img src="./../assets/images/facebook.svg" alt="Facebook" /></a>
+                <a href="#" target="_blank"><img src="./../assets/images/x.svg" alt="Twitter" /></a>
+            </div>
         </div>
-    </div>
 
-    <div class="footer-section">
-        <h2>Navegación</h2>
-        <ul class="footer-nav">
-            <li><a href="./../index.html">Inicio</a></li>
-            <li><a href="./proyecto.html">Profesores</a></li>
-            <li><a href="./contact.html">Contacto</a></li>
-            <!-- Agrega más elementos según sea necesario -->
-        </ul>
-    </div>
+        <div class="footer-section">
+            <h2>Navegación</h2>
+            <ul class="footer-nav">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./news.html">Novedades</a></li>
+                <li><a href="./proyecto.html">Profesores</a></li>
+                <li><a href="./contact.html">Contacto</a></li>
+                <li><a href="./about.html">Sobre Nosotros</a></li>
+                <!-- Agrega más elementos según sea necesario -->
+            </ul>
+        </div>
 
-    <!-- <div class="footer-section">
-      <a
-        class="weatherwidget-io"
-        href="https://forecast7.com/es/n34d60n58d38/buenos-aires/"
-        data-label_1="BUENOS AIRES"
-        data-label_2="WEATHER"
-        data-font="Roboto"
-        data-icons="Climacons Animated"
-        data-mode="Current"
-        data-theme="original"
-        data-basecolor="#38195a"
-        >BUENOS AIRES WEATHER</a
-      >
-    </div> -->
-</footer>
+        <!-- <div class="footer-section">
+          <a
+            class="weatherwidget-io"
+            href="https://forecast7.com/es/n34d60n58d38/buenos-aires/"
+            data-label_1="BUENOS AIRES"
+            data-label_2="WEATHER"
+            data-font="Roboto"
+            data-icons="Climacons Animated"
+            data-mode="Current"
+            data-theme="original"
+            data-basecolor="#38195a"
+            >BUENOS AIRES WEATHER</a
+          >
+        </div> -->
+
+        <div class="footer-section" id="pokeApi">
+            <h2>Pokémon</h2>
+            <img src="#" alt="pokemon" id="pokeImg">
+            <span id="pokeName">Name Poke</span>
+        </div>
+    </footer>
+
+    <script src="../assets/js/fetch_pokemon.js"></script>
+
+</body>
+
 
 </html>
