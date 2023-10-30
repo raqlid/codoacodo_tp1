@@ -22,15 +22,26 @@ html {
 }
 
 h1 {
+ 
   font-size: 3em;
-}
+   text-align: center;
+    color: #38195a;
+    text-decoration: underline;
+  }
+  
+
 
 h2 {
   font-size: 2em;
   margin-bottom: 0.5em;
-  text-decoration: underline;
-  color: #d9a404;
+    background-color: #38195a;
+  color: white;
+  text-align: center;
+  animation-name: animacionh2 ;
+  animation-duration: 10s;
+  animation-timing-function: cubic-bezier(1, 0.82, 0.165, 1)
 }
+
 
 h3 {
   font-size: 2em;
@@ -74,7 +85,7 @@ body {
 }
 
 main {
-  width: 90%;
+  width: 95%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -128,6 +139,11 @@ li #a-start {
   padding: 0;
   margin: 0;
   background-color: var(--fucsiaOscuro);
+  transform: rotate(15deg);
+  animation-name: animacionlogo;
+  animation-duration: 1s;
+
+
 }
 
 li a:hover,
@@ -324,16 +340,17 @@ footer div h2 {
   place-items: center;
   text-decoration: none;
   height: 100px;
-  background-color: #d9a404;
+  
   color: #38195a;
   border: 10px double #38195a;
 }
 
-.secciones {
+.secciones { border-right: 1px solid #38195a;
+  border-left: 1px solid #38195a;
+  
   display: inline-block;
   width: 33%;
   height: 20px;
-  background-color: #38195a;
   text-align: center;
   color: #ffb633;
   text-decoration: none;
@@ -344,7 +361,8 @@ footer div h2 {
   ;
   height: 32px;
   text-decoration: none;
-  justify-content: center}
+  justify-content: center;
+}
 
   .dale {
     display: flex;
@@ -352,3 +370,47 @@ footer div h2 {
     bottom: 1px;
     right: 1px;
   }
+
+  @keyframes animacionlogo {
+    from {
+      rotate: -50deg;
+    }
+  
+    to {
+      rotate: 0deg;
+    }}
+
+    
+table {
+  color: white;
+  height: 300px;
+  text-align: center;
+  width: 90%;
+  margin-bottom: 100px;
+  opacity: 70%;
+}
+
+th {
+  width: 33%;
+  text-align: center;
+  background-color: #38195a;
+}
+
+tr {
+  background-color: #ffa400;
+  border: 20px solid black;
+}
+
+tr:nth-child(2n) {
+  background-color: #cc8300;
+}
+
+
+@keyframes animacionh2 
+{ from {
+    background-color: #ffb633;
+  }
+
+  to {
+    background-color: #38195a;
+  }}
