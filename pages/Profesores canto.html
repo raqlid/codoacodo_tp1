@@ -5,30 +5,51 @@
 <head>
   <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
   <title>Profesores de guitarra</title>
-  <link rel="stylesheet" href="./../assets/css/profep.css">
+  <link rel="stylesheet" href="./../assets/css/Curso.css">
+  <link
+  rel="icon"
+  href="./../assets/images/favicon.ico"
+  type="image/x-icon"
+/>
 </head>
 
 
-<header>
-  <div class="logo">
-    <img src="../assets/images/logohaciendomusica.png">
-  </div>
-  <nav class="navbar">
-    <ul>
-      <li><a href="../index.html">INICIO</a></li>
-      <!-- <li><a href="#nuestrcurso">NUESTRO METODO</a></li>
-      <li><a href="#nuestrosprofesores">NUESTROS PROFESORES</a></li>
-      <li><a href="#unete">UNETE</a></li> -->
-      <li><a href="./proyecto.html">CURSOS</a></li>
-      <li><a href="./contact.html">CONTACTO</a></li>
-    </ul>
-  </nav>
+<header class="header" id="header" >
+  <h1>HACIENDO MUSICA</h1>
+  <p>Tu sitio para <b>aprender</b>.</p>
 </header>
+
+<nav id="inicio">
+  <ul>
+    <li class="clearfix">
+      <a href="../index.html" id="a-start"
+        ><img
+          id="img-start"
+          src="../assets/images/logohaciendomusica.png"
+          style="width: auto; height: 5vh"
+          alt="logotipo"
+      /></a>
+    </li>
+    <li><a href="./news.html">Novedades</a></li>
+    <li><a href="./proyecto.html">Profesores</a></li>
+    <li><a href="./contact.html">Contacto</a></li>
+    <li><a href="./about.html">Sobre nosotros</a></li>
+    <!-- <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">En esta clase</a>
+      <div class="dropdown-content">
+        <a href="#service1">Servicios ofrecidos</a>
+        <a href="#the-trainer">Profesor</a>
+        <a href="#contact">Contacto</a>
+        <a href="#location">Ubicación</a>
+      </div>
+    </li> -->
+  </ul>
+</nav>
 
 
 <body>
 
-  <h1>Profesores de Canto </h1>
+  <h2>Profesores de Canto </h2>
 
 
   <table>
@@ -80,8 +101,58 @@
 
 
 <footer>
-  <p>Haciendo Música © 2023.</p>
-  <h4>Grupo 13 - Python</h4>
+  <div class="footer-section">
+    <h2>Redes Sociales</h2>
+    <div class="footer-social-icons">
+      <a href="#" target="_blank"
+        ><img src="./../assets/images/instagram.svg" alt="Instagram"
+      /></a>
+      <a href="#" target="_blank"
+        ><img src="./../assets/images/facebook.svg" alt="Facebook"
+      /></a>
+      <a href="#" target="_blank"
+        ><img src="./../assets/images/x.svg" alt="Twitter"
+      /></a>
+
+      <p>HaciendoMúsica@2023</p>
+      <p>GRUPO 13</p>
+    </div>
+  </div>
+
+  <div class="footer-section">
+    <h2>Navegación</h2>
+    <ul class="footer-nav">
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="./news.html">Novedades</a></li>
+      <li><a href="./proyecto.html">Profesores</a></li>
+      <li><a href="./contact.html">Contacto</a></li>
+      <li><a href="./about.html">Sobre Nosotros</a></li>
+      <!-- Agrega más elementos según sea necesario -->
+    </ul>
+  </div>
+
+  <!-- <div class="footer-section">
+        <a
+          class="weatherwidget-io"
+          href="https://forecast7.com/es/n34d60n58d38/buenos-aires/"
+          data-label_1="BUENOS AIRES"
+          data-label_2="WEATHER"
+          data-font="Roboto"
+          data-icons="Climacons Animated"
+          data-mode="Current"
+          data-theme="original"
+          data-basecolor="#38195a"
+          >BUENOS AIRES WEATHER</a
+        >
+      </div> -->
+
+  <div class="footer-section" id="pokeApi">
+    <h2>Pokémon</h2>
+    <img src="#" alt="pokemon" id="pokeImg" />
+    <span id="pokeName"></span>
+  </div>
 </footer>
+
+<script src="../assets/js/fetch_pokemon.js"></script>
 
 </html>
